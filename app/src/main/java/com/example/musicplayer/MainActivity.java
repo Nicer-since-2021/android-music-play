@@ -1,12 +1,9 @@
 package com.example.musicplayer;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button excitedBtn;
@@ -19,15 +16,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         excitedBtn = findViewById(R.id.excited);
         funkyBtn = findViewById(R.id.funky);
         relaxBtn = findViewById(R.id.relax);
         sensualBtn = findViewById(R.id.sensual);
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
-            Intent intent = new Intent(MainActivity.this, MusicPlayer.class);
-
             @Override
             public void onClick(View v) {
                 int temp = 0;
@@ -45,10 +39,12 @@ public class MainActivity extends AppCompatActivity {
                         temp = 3;
                         break;
                 }
+                Intent intent = new Intent(MainActivity.this, MusicPlayer.class);
                 intent.putExtra("BGMgenre", temp);
                 startActivity(intent);
             }
         };
+
         excitedBtn.setOnClickListener(onClickListener);
         funkyBtn.setOnClickListener(onClickListener);
         relaxBtn.setOnClickListener(onClickListener);
