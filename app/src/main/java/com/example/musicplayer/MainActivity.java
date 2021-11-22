@@ -19,28 +19,39 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(MainActivity.this, MusicPlayer.class);
 
         excitedBtn = findViewById(R.id.excited);
         funkyBtn = findViewById(R.id.funky);
         relaxBtn = findViewById(R.id.relax);
         sensualBtn = findViewById(R.id.sensual);
 
-        View.OnClickListener onClickListener = new Button.OnClickListener() {
+        View.OnClickListener onClickListener = new View.OnClickListener() {
+            Intent intent = new Intent(MainActivity.this, MusicPlayer.class);
+
             @Override
             public void onClick(View v) {
+                int temp = 0;
                 switch (v.getId()) {
                     case R.id.excited:
-                        intent.putExtra("BGMgenre", 0);
+                        temp = 0;
+                        break;
                     case R.id.funky:
-                        intent.putExtra("BGMgenre", 1);
+                        temp = 1;
+                        break;
                     case R.id.relax:
-                        intent.putExtra("BGMgenre", 2);
+                        temp = 2;
+                        break;
                     case R.id.sensual:
-                        intent.putExtra("BGMgenre", 3);
+                        temp = 3;
+                        break;
                 }
+                intent.putExtra("BGMgenre", temp);
                 startActivity(intent);
             }
         };
+        excitedBtn.setOnClickListener(onClickListener);
+        funkyBtn.setOnClickListener(onClickListener);
+        relaxBtn.setOnClickListener(onClickListener);
+        sensualBtn.setOnClickListener(onClickListener);
     }
 }
