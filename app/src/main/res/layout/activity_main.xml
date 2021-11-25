@@ -10,31 +10,51 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/excited"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="신나는" />
+            android:text="신나는"
+            android:backgroundTint="#b6dbb0" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/funky"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="펑키한" />
+            android:text="펑키한"
+            android:backgroundTint="#b6dbb0" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/relax"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="잔잔한" />
+            android:text="잔잔한"
+            android:backgroundTint="#b6dbb0" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/sensual"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="감각적인" />
+            android:text="감각적인"
+            android:backgroundTint="#b6dbb0" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="더보기"
+            android:backgroundTint="#fce1a4" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nothing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="오늘은 안 들을래..."
+            android:backgroundTint="#e5e4e4" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

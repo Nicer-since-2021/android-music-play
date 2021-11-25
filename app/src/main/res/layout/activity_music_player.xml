@@ -9,12 +9,13 @@
     tools:context=".MusicPlayer"
     >
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/idReSelectGenreBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="장르 다시 선택"
+        android:backgroundTint="#b6dbb0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton

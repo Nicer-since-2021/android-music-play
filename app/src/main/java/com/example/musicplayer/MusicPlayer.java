@@ -21,7 +21,7 @@ public class MusicPlayer extends AppCompatActivity {
 
         rec_intent = getIntent();
         genre = rec_intent.getIntExtra("BGMgenre", 0);
-        audioPlaying(genre);
+        audioSelect(genre);
 
         reSelectBtn = findViewById(R.id.idReSelectGenreBtn);
         reSelectBtn.setOnClickListener(new View.OnClickListener(){
@@ -49,7 +49,7 @@ public class MusicPlayer extends AppCompatActivity {
         });
     }
 
-    public void audioPlaying(int gNum) {
+    public void audioSelect(int gNum) {
         switch(gNum){
             case 0:
                 mp = MediaPlayer.create(this, R.raw.excited);
